@@ -1,0 +1,15 @@
+C:\zFolder\FullStackDotNet\studentgrademanagement\bin\Debug\net10.0\StudentGradeManagement.exe
+C:\zFolder\FullStackDotNet\studentgrademanagement\bin\Debug\net10.0\StudentGradeManagement.deps.json
+C:\zFolder\FullStackDotNet\studentgrademanagement\bin\Debug\net10.0\StudentGradeManagement.runtimeconfig.json
+C:\zFolder\FullStackDotNet\studentgrademanagement\bin\Debug\net10.0\StudentGradeManagement.dll
+C:\zFolder\FullStackDotNet\studentgrademanagement\bin\Debug\net10.0\StudentGradeManagement.pdb
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.AssemblyInfoInputs.cache
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.AssemblyInfo.cs
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.csproj.CoreCompileInputs.cache
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.sourcelink.json
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.dll
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\refint\StudentGradeManagement.dll
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.pdb
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\StudentGradeManagement.genruntimeconfig.cache
+C:\zFolder\FullStackDotNet\studentgrademanagement\obj\Debug\net10.0\ref\StudentGradeManagement.dll
