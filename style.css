@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header,
+nav,
+main,
+footer {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+nav a {
+  color: #334155;
+  font-weight: 600;
+}
+
+main {
+  padding-block: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin: 0 0 1rem;
+  color: #111827;
+  font-size: 1.75rem;
+}
+
+.projects,
+.project-list,
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+}
+
+.card,
+.project,
+.project-card {
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 5%);
+}
+
+.card h3,
+.project h3,
+.project-card h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.skills span,
+.tag {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.9rem;
+}
+
+button,
+.button,
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 0.35rem 0 1rem;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  nav {
+    gap: 0.75rem 1rem;
+  }
+}
