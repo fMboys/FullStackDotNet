@@ -1,0 +1,65 @@
+@page "/events/{Id:int}"
+@inject UserSessionTracker SessionTracker
+@using EventCard.Models
+
+@if (Event != null)
+{
+    <h2>@Event.Name</h2>
+
+    <p>
+        <strong>Date:</strong>
+        @Event.Date.ToString("MMMM dd, yyyy")
+    </p>
+
+    <p>
+        <strong>Location:</strong>
+        @Event.Location
+    </p>
+
+    @if (SessionTracker.IsRegistered(Event.Id))
+    {
+        <div class="alert alert-success">
+            You have already registered for this event.
+        </div>
+    }
+    else
+    {
+        <a class="btn btn-primary" href="@($"/events/{Event.Id}/register")">Register</a>
+    }
+
+    <div class="mt-3">
+        <a href="/events">/events</a>
+        <br />
+        <a href="@($"/events/{Event.Id}/register")">/events/@Event.Id/register</a>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Event? Event;
+
+    protected override void OnInitialized()
+    {
+        var events = new List<Event>
+        {
+            new()
+            {
+                Id = 1,
+                Name = "Tech Conference 2026",
+                Date = new DateTime(2026, 11, 15),
+                Location = "New York, NY"
+            },
+            new()
+            {
+                Id = 2,
+                Name = "Blazor Summit",
+                Date = new DateTime(2026, 12, 5),
+                Location = "Seattle, WA"
+            }
+        };
+
+        Event = events.FirstOrDefault(e => e.Id == Id);
+    }
+}

@@ -1,0 +1,28 @@
+@using EventCard.Models
+
+
+@if (Event != null)
+{
+    <div class="event-card">
+        <div class="event-card-header">
+            <h3>@Event.Name</h3>
+        </div>
+
+        <div class="event-card-body">
+            <p>
+                <strong>Date:</strong>
+                @Event.Date.ToString("MMMM dd, yyyy")
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                @Event.Location
+            </p>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Event? Event { get; set; }
+}
