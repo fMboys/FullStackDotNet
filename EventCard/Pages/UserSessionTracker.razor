@@ -1,0 +1,15 @@
+@inject UserSessionTracker SessionTracker
+
+<div class="card p-3">
+    <h5>User Session</h5>
+
+    <p>
+        Session Started:
+        @SessionTracker.SessionStartTime
+    </p>
+
+    <p>
+        Registered Events:
+        @SessionTracker.RegisteredEvents.Count
+    </p>
+</div>
