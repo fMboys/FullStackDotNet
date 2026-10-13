@@ -1,6 +1,18 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("BlazorPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:5257")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("BlazorPolicy");
 
 app.MapGet("/api/products", () =>
 
