@@ -10,6 +10,11 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+});
+
 var app = builder.Build();
 
 //app.UseCors("BlazorPolicy");
@@ -18,20 +23,16 @@ app.UseCors(policy =>
           .AllowAnyMethod()
           .AllowAnyHeader());
 
-app.MapGet("/api/productlist", () =>
-
+app.MapGet("/api/productlist", () => new
 {
-
-    return new[]
-
+    products = new[]
     {
-
-        new { Id = 1, Name = "Laptop", Price = 1200.50, Stock = 25 },
-
-        new { Id = 2, Name = "Headphones", Price = 50.00, Stock = 100 }
-
-    };
-
+        new ProductDto(1, "Laptop", 1200.50m, 25, new CategoryDto(101, "Electronics")),
+        new ProductDto(2, "Headphones", 50.00m, 100, new CategoryDto(102, "Accessories"))
+    }
 });
 
 app.Run();
+
+public record CategoryDto(int Id, string Name);
+public record ProductDto(int Id, string Name, decimal Price, int Stock, CategoryDto Category);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mQ00MbozGHQ=",
+  "dgSpecHash": "uaTMP7CPQVw=",
   "success": true,
-  "projectFilePath": "C:\\zFolder\\FullStackDotNet\\FullStackApp\\ClientAppdotnet\\ClientAppdotnet.csproj",
+  "projectFilePath": "C:\\zFolder\\FullStackDotNet\\fullstackapp\\clientappdotnet\\ClientAppdotnet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.9\\microsoft.aspnetcore.app.internal.assets.10.0.9.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.9\\microsoft.aspnetcore.authorization.10.0.9.nupkg.sha512",
