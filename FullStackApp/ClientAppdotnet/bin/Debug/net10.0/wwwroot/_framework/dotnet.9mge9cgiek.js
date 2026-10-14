@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "ClientAppdotnet",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-2X/zg+Eyp08ZQ03I2y6t9DeCKLAd7b3nCLuCmZ/7yVA=",
+    "hash": "sha256-PAh2mN2WXsmPGk8WPRMS9gaNnvUsS6GrlonzEX9GvQY=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.ikrs475e5v.js"
@@ -1242,16 +1242,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "ClientAppdotnet.wasm",
-        "name": "ClientAppdotnet.8mdob0m23r.wasm",
-        "hash": "sha256-8CXCZcKR29NTwJ9wRlNmAlHTShXDUH73olY7f3JruwY=",
+        "name": "ClientAppdotnet.pw5s2j31pk.wasm",
+        "hash": "sha256-6eqF9BQzwgNEs9lO6WNsoF+VzJUTchwNRYd3HCeCZZ8=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "ClientAppdotnet.pdb",
-        "name": "ClientAppdotnet.djcbm2s2gk.pdb",
-        "hash": "sha256-OXIjUSuEzlZUpVdVkCHcyRCgj8BffmiNtFt29taym+4=",
+        "name": "ClientAppdotnet.lhbr53i1rf.pdb",
+        "hash": "sha256-6ePXjLSVf841Pq6Oaad7MfU2f1GDJ0hfDIycX0yDLp4=",
         "cache": "force-cache"
       }
     ],
