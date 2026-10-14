@@ -25,6 +25,9 @@
     {
         try
         {
+            // Copilot suggested using GetFromJsonAsync<T>()
+        // to simplify API consumption and automatic
+        // JSON deserialization.
             @* products = await Http.GetFromJsonAsync<Product[]>("/api/productlist"); *@
             var response = await Http.GetAsync("/api/productlist");
             response.EnsureSuccessStatusCode();
@@ -33,9 +36,14 @@
                 json,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
                 ?? Array.Empty<Product>();
+                    // Copilot identified a mismatch between the API JSON
+        // structure and the Blazor Product model and recommended
+        // returning a Product array directly from the API.
         }
         catch (Exception ex)
         {
+             // Copilot recommended exception handling to prevent
+        // UI failures when the API is unavailable.
             Console.WriteLine($"Error loading products: {ex.Message}");
             products = Array.Empty<Product>();
         }
