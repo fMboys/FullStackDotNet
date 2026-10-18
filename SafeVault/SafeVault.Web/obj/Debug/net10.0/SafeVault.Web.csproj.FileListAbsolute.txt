@@ -1,0 +1,10 @@
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.csproj.AssemblyReference.cache
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.AssemblyInfoInputs.cache
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.AssemblyInfo.cs
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.csproj.CoreCompileInputs.cache
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.RazorAssemblyInfo.cache
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.RazorAssemblyInfo.cs
+C:\zFolder\FullStackDotNet\safevault\safevault.web\obj\Debug\net10.0\SafeVault.Web.sourcelink.json

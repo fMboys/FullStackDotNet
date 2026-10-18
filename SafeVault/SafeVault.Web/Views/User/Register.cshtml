@@ -1,0 +1,27 @@
+@model SafeVault.Web.Models.User
+
+<h2>User Registration</h2>
+
+<form asp-action="Register" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <br />
+
+    <button type="submit">Submit</button>
+
+</form>
