@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "IpaHee2ceyA=",
+  "dgSpecHash": "qTT40xWrU14=",
   "success": true,
   "projectFilePath": "C:\\zFolder\\FullStackDotNet\\SafeVault\\SafeVault.Web\\SafeVault.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fahad\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",
+    "C:\\Users\\Fahad\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.3.13\\microsoft.aspnetcore.authentication.cookies.2.3.13.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
@@ -54,6 +56,18 @@
     "C:\\Users\\Fahad\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.11\\system.security.cryptography.protecteddata.9.0.11.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Authentication.Cookies will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\zFolder\\FullStackDotNet\\SafeVault\\SafeVault.Web\\SafeVault.Web.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\zFolder\\FullStackDotNet\\SafeVault\\SafeVault.Web\\SafeVault.Web.csproj",
+      "libraryId": "Microsoft.AspNetCore.Authentication.Cookies",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1902",
       "level": "Warning",

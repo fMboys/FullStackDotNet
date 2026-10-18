@@ -1,0 +1,29 @@
+@model SafeVault.Web.Models.LoginViewModel
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>

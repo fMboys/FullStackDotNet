@@ -7,41 +7,38 @@ namespace SafeVault.Web.Controllers;
 
 public class UserController : Controller
 {
-     private readonly AppDbContext _context;
+    private readonly AppDbContext _context;
 
     public UserController(AppDbContext context)
     {
         _context = context;
     }
 
-    [HttpGet]
-    public IActionResult Register()
-    {
-        return View();
-    }
-
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Register(User user)
+    public IActionResult Register(
+        string username,
+        string email,
+        string password)
     {
-        if (!ModelState.IsValid)
-            return View(user);
-
-        // Detect malicious input
-        if (InputSanitizer.ContainsMaliciousContent(user.Username) ||
-            InputSanitizer.ContainsMaliciousContent(user.Email))
+        if (string.IsNullOrWhiteSpace(username) ||
+            string.IsNullOrWhiteSpace(email) ||
+            string.IsNullOrWhiteSpace(password))
         {
-            ModelState.AddModelError("", "Potentially harmful input detected.");
-            return View(user);
+            return BadRequest();
         }
 
-        // Sanitize values
-        user.Username = InputSanitizer.Sanitize(user.Username);
-        user.Email = InputSanitizer.Sanitize(user.Email);
+        var user = new User
+        {
+            Username = username,
+            Email = email,
+            PasswordHash =
+                PasswordService.HashPassword(password)
+        };
 
         _context.Users.Add(user);
         _context.SaveChanges();
 
-        return RedirectToAction("Register");
+        return RedirectToAction("Login", "Account");
     }
 }
