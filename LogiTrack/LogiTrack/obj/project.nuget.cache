@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pJddaRHsoD8=",
+  "dgSpecHash": "JCkkowTlFn0=",
   "success": true,
-  "projectFilePath": "C:\\zFolder\\FullStackDotNet\\logitrack\\logitrack\\LogiTrack.csproj",
+  "projectFilePath": "C:\\zFolder\\FullStackDotNet\\LogiTrack\\LogiTrack\\LogiTrack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fahad\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Fahad\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\10.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.10.0.14.nupkg.sha512",
@@ -45,9 +45,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "C:\\zFolder\\FullStackDotNet\\logitrack\\logitrack\\LogiTrack.csproj",
+      "projectPath": "C:\\zFolder\\FullStackDotNet\\LogiTrack\\LogiTrack\\LogiTrack.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\zFolder\\FullStackDotNet\\logitrack\\logitrack\\LogiTrack.csproj",
+      "filePath": "C:\\zFolder\\FullStackDotNet\\LogiTrack\\LogiTrack\\LogiTrack.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"
