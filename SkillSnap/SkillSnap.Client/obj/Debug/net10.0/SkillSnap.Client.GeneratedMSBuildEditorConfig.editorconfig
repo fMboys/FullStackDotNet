@@ -45,6 +45,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/zFolder/FullStackDotNet/SkillSnap/SkillSnap.Client/Pages/ProfileCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZUNhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/zFolder/FullStackDotNet/SkillSnap/SkillSnap.Client/Pages/ProjectList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/zFolder/FullStackDotNet/SkillSnap/SkillSnap.Client/Pages/SkillTags.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2tpbGxUYWdzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/zFolder/FullStackDotNet/SkillSnap/SkillSnap.Client/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

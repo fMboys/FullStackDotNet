@@ -1,0 +1,24 @@
+@code {
+    private List<string> Skills = new()
+    {
+        "C#",
+        "ASP.NET Core",
+        "Blazor",
+        "Entity Framework",
+        "SQL Server",
+        "Azure"
+    };
+}
+
+<div class="card p-3 shadow-sm">
+    <h4>Skills</h4>
+
+    <div class="d-flex flex-wrap gap-2">
+        @foreach (var skill in Skills)
+        {
+            <span class="badge bg-primary px-3 py-2">
+                @skill
+            </span>
+        }
+    </div>
+</div>
