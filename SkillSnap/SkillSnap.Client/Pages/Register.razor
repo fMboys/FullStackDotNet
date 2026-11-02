@@ -1,0 +1,68 @@
+@page "/register"
+
+@using SkillSnap.Client.Models
+@using SkillSnap.Client.Services
+
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<h3>Create Account</h3>
+
+<EditForm Model="model"
+          OnValidSubmit="RegisterUser">
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText class="form-control mb-2"
+               placeholder="First Name"
+               @bind-Value="model.FirstName" />
+
+    <InputText class="form-control mb-2"
+               placeholder="Last Name"
+               @bind-Value="model.LastName" />
+
+    <InputText class="form-control mb-2"
+               placeholder="Email"
+               @bind-Value="model.Email" />
+
+    <InputText class="form-control mb-2"
+               type="password"
+               placeholder="Password"
+               @bind-Value="model.Password" />
+
+    <button class="btn btn-success">
+        Register
+    </button>
+
+</EditForm>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert alert-success mt-3">
+        @message
+    </div>
+}
+
+@code {
+
+    private RegisterRequest model = new();
+
+    private string? message;
+
+    private async Task RegisterUser()
+    {
+        var result =
+            await AuthService.RegisterAsync(model);
+
+        if (result)
+        {
+            Navigation.NavigateTo("/login");
+        }
+        else
+        {
+            message =
+                "Registration failed.";
+        }
+    }
+}

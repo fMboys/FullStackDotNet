@@ -18,6 +18,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\10.0.9\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\10.0.9\build\Microsoft.NET.ILLink.Tasks.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\10.0.9\build\net10.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\10.0.9\build\net10.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.9\build\Microsoft.AspNetCore.App.Internal.Assets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.9\build\Microsoft.AspNetCore.App.Internal.Assets.props')" />
+    <Import Project="$(NuGetPackageRoot)blazor.storage\5.0.0\buildTransitive\Blazor.Storage.props" Condition="Exists('$(NuGetPackageRoot)blazor.storage\5.0.0\buildTransitive\Blazor.Storage.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_NET_Sdk_WebAssembly_Pack Condition=" '$(PkgMicrosoft_NET_Sdk_WebAssembly_Pack)' == '' ">C:\Users\Fahad\.nuget\packages\microsoft.net.sdk.webassembly.pack\10.0.9</PkgMicrosoft_NET_Sdk_WebAssembly_Pack>

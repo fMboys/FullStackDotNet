@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SkillSnap.Api.Models;
 
 namespace SkillSnap.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class SkillsController : ControllerBase
@@ -25,6 +27,7 @@ public class SkillsController : ControllerBase
 
     // POST: api/skills
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<Skill>> CreateSkill(Skill skill)
     {
         _context.Skills.Add(skill);

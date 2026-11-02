@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SkillSnap.Api.Models;
 
 namespace SkillSnap.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ProjectsController : ControllerBase
@@ -24,6 +26,7 @@ public class ProjectsController : ControllerBase
     }
 
     // POST: api/projects
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public async Task<ActionResult<Project>> CreateProject(Project project)
     {
