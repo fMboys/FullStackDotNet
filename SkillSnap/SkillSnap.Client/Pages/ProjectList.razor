@@ -1,3 +1,14 @@
+@using SkillSnap.Api.Models
+@using SkillSnap.Client.Services
+@inject ProjectService ProjectService
+@code {
+    private List<Project> projects;
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await ProjectService.GetProjectsAsync();
+    }
+}
+
 @code {
     private List<string> Projects = new()
     {

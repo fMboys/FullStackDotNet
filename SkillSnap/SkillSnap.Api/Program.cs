@@ -10,6 +10,17 @@ builder.Services.AddDbContext<SkillSnapContext>(options =>
 
 var app = builder.Build();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowClient", policy =>
+    {
+        policy.WithOrigins("https://localhost:5001")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+app.UseCors("AllowClient");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
