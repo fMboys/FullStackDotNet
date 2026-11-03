@@ -1,0 +1,307 @@
+SkillSnap Project Documentation
+Project Summary
+
+SkillSnap is a full-stack portfolio and skills management application built using ASP.NET Core Web API, Entity Framework Core, ASP.NET Identity, and Blazor. The application allows users to register, authenticate, manage their professional profiles, showcase projects, and organize technical skills through a modern web interface.
+
+The backend provides RESTful API endpoints for authentication, project management, and skill management, while the Blazor frontend delivers an interactive user experience. JWT authentication secures API access, and state management preserves user information across components during a session.
+
+Key Features
+1. CRUD Operations
+Projects
+View all projects
+Add new projects
+Edit existing projects (planned)
+Delete projects (planned)
+Skills
+View all skills
+Add new skills
+Associate skills with user profiles
+User Profiles
+Store profile information
+Display user bio and profile image
+Manage portfolio-related data
+2. Security Features
+ASP.NET Identity
+
+Implemented a custom ApplicationUser class that inherits from IdentityUser.
+
+Features include:
+
+User registration
+User login
+Password hashing
+User management
+Role support
+JWT Authentication
+Secure login endpoint
+Token generation on successful authentication
+Token validation on protected API requests
+Authorization support for future role-based access
+Client Authentication
+JWT stored in browser local storage
+Automatic token inclusion on API requests
+Login and logout functionality through Blazor
+3. Performance and Caching
+Memory Caching
+
+Implemented in API endpoints to reduce unnecessary database access.
+
+Benefits:
+
+Faster response times
+Reduced SQL queries
+Better scalability
+Performance Monitoring
+
+Implemented:
+
+Stopwatch timing measurements
+Request duration logging
+Cache hit/miss logging
+
+Example metrics collected:
+
+Cache MISS: 240 ms
+Cache HIT: 7 ms
+
+
+These measurements verified that caching significantly improved repeated request performance.
+
+4. State Management
+
+Implemented a scoped Blazor service:
+
+UserSessionService
+
+
+Stores:
+
+UserId
+User Role
+Current Project ID
+Current Project Title
+Editing state
+
+Benefits:
+
+Shared state between components
+No unnecessary API requests
+Improved user experience
+Session persistence while the application remains open
+Development Process
+Phase 1: Application Design
+
+The initial application architecture was designed using:
+
+ASP.NET Core Web API
+Entity Framework Core
+SQL Server
+Blazor WebAssembly
+ASP.NET Identity
+
+Primary entities identified:
+
+ApplicationUser
+Project
+Skill
+
+Relationships were designed before implementation.
+
+Phase 2: Backend Development
+
+Created:
+
+Models
+ApplicationUser
+Project
+Skill
+
+Database Context
+SkillSnapContext
+
+Controllers
+ProjectsController
+SkillsController
+AuthController
+
+Features Added
+CRUD endpoints
+Dependency Injection
+Async database operations
+JWT authentication
+Entity relationships
+Phase 3: Frontend Development
+
+Built multiple reusable Blazor components:
+
+Components
+ProfileCard
+ProjectList
+SkillTags
+
+Authentication Pages
+Login
+Register
+
+Services
+ProjectService
+SkillService
+AuthService
+UserSessionService
+
+
+The UI communicates with the API using HttpClient.
+
+Phase 4: Performance Optimization
+
+Optimizations included:
+
+Memory caching
+Request timing analysis
+Logging
+State container pattern
+
+These improvements reduced database calls and improved responsiveness.
+
+Use of Copilot During Development
+
+Microsoft Copilot was used throughout the project to assist with:
+
+Code Generation
+Entity classes
+Controllers
+Services
+Blazor components
+Authentication setup
+Debugging Assistance
+
+Copilot helped identify:
+
+Dependency injection issues
+Authentication configuration problems
+EF Core relationship setup
+JWT configuration errors
+Optimization Suggestions
+
+Copilot recommended:
+
+Memory caching
+Request timing middleware
+Scoped state containers
+Service registration cleanup
+Error handling improvements
+Productivity Benefits
+
+Using Copilot accelerated development by providing:
+
+Boilerplate generation
+Best practice recommendations
+Refactoring suggestions
+Example implementations for common patterns
+
+The generated code was reviewed, tested, and customized before integration into the project.
+
+Challenges Encountered
+Authentication Configuration
+
+Integrating ASP.NET Identity with JWT authentication required careful configuration of:
+
+UserManager
+SignInManager
+Token generation
+Middleware registration
+Resolution
+
+Tested authentication endpoints independently using Swagger and validated JWT claims.
+
+State Management
+
+Passing data between components became increasingly difficult as additional features were added.
+
+Resolution
+
+Implemented a centralized UserSessionService using the scoped service pattern.
+
+Performance Optimization
+
+Database queries were being executed on every request.
+
+Resolution
+
+Implemented memory caching and measured improvements using Stopwatch instrumentation.
+
+Known Issues
+
+The following limitations currently exist:
+
+Limited CRUD Support
+
+Current implementation includes:
+
+GET
+POST
+
+Future versions should add:
+
+PUT
+DELETE
+
+for all entities.
+
+Token Refresh
+
+Currently:
+
+JWT tokens expire after a configured lifetime
+No refresh token mechanism exists
+
+A future enhancement should implement refresh token support.
+
+Advanced Authorization
+
+Current system supports authentication but has limited role-based authorization.
+
+Future implementation should include:
+
+Admin roles
+User roles
+Policy-based authorization
+Validation Enhancements
+
+Current validation uses data annotations.
+
+Future improvements could include:
+
+FluentValidation
+Custom business rules
+Better client-side validation feedback
+Future Improvements
+
+Planned enhancements include:
+
+Functional Improvements
+Project editing
+Project deletion
+Skill editing
+Skill deletion
+User profile editing
+Search and filtering
+Security Enhancements
+Refresh tokens
+Role-based authorization
+Account lockout policies
+Email verification
+Performance Enhancements
+Distributed caching
+Response compression
+Database query optimization
+API rate limiting
+User Experience Improvements
+Dark mode
+Toast notifications
+Dashboard analytics
+Drag-and-drop project management
+Responsive mobile experience
+Conclusion
+
+SkillSnap successfully demonstrates a modern full-stack application architecture using Blazor, ASP.NET Core, Entity Framework Core, Identity, JWT authentication, caching, and state management. The project provides a secure and scalable foundation for a developer portfolio platform while showcasing best practices in API design, user authentication, performance optimization, and component-based UI development.
