@@ -15,13 +15,16 @@ public class AuthService
     public bool IsAuthenticated { get; private set; }
 
     public event Action? AuthenticationStateChanged;
+    private readonly UserSessionService _session;
 
     public AuthService(
         HttpClient httpClient,
-        ILocalStorageService localStorage)
+        ILocalStorageService localStorage,
+        UserSessionService session)
     {
         _httpClient = httpClient;
         _localStorage = localStorage;
+        _session = session;
     }
 
     public async Task<bool> LoginAsync(
@@ -39,7 +42,11 @@ public class AuthService
         if (!response.IsSuccessStatusCode)
             return false;
 
+            
+
         var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+        _session.UserId = result.Email;
+            _session.Role = result.FullName;
 
         if (result is null)
             return false;
@@ -77,6 +84,7 @@ public class AuthService
         _httpClient.DefaultRequestHeaders.Authorization = null;
 
         IsAuthenticated = false;
+         _session.Clear();
 
         AuthenticationStateChanged?.Invoke();
     }

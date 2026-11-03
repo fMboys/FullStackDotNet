@@ -13,6 +13,8 @@ builder.Services.AddDbContext<SkillSnapContext>(options =>
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<SkillSnapContext>();
 
+builder.Services.AddMemoryCache();
+
 var app = builder.Build();
 
 builder.Services.AddCors(options =>

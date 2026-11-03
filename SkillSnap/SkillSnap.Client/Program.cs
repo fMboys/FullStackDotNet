@@ -30,6 +30,8 @@ builder.Services.AddScoped(sp =>
     };
 });
 
+builder.Services.AddScoped<UserSessionService>();
+
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 await builder.Build().RunAsync();

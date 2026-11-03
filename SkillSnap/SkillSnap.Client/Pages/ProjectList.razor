@@ -1,5 +1,6 @@
 @using SkillSnap.Api.Models
 @using SkillSnap.Client.Services
+@inject UserSessionService Session
 @inject ProjectService ProjectService
 @code {
     private List<Project> projects;
@@ -17,6 +18,15 @@
         "Task Tracker App",
         "Portfolio Website"
     };
+}
+
+@code {
+    private void EditProject(Project project)
+    {
+        Session.CurrentProjectId = project.Id;
+        Session.CurrentProjectTitle = project.Title;
+        Session.IsEditingProject = true;
+    }
 }
 
 <div class="card p-3 shadow-sm">
